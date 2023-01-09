@@ -19,11 +19,6 @@ function bookElement(bookData) {
   bookList.appendChild(bookItem);
 }
 
-function newBookItem() {
-  const book = addBook(newBookTitle.value, newBookAuthor.value);
-  bookElement(book);
-}
-
 function Book(title, author, id) {
   this.title = title;
   this.author = author;
@@ -37,6 +32,11 @@ function addBook(title, author) {
   return book;
 }
 
+function newBookItem() {
+  const book = addBook(newBookTitle.value, newBookAuthor.value);
+  bookElement(book);
+}
+
 // Removing books
 function removeBook() {
   
@@ -44,8 +44,8 @@ function removeBook() {
 
 if (storedBooks) {
   books = storedBooks;
-  books.forEach(book => {
-    bookElement(book)
+  books.forEach((book) => {
+    bookElement(book);
   });
 }
 
