@@ -20,21 +20,35 @@ function bookElement(bookData) {
   bookList.appendChild(bookItem);
 }
 
-function Book(title, author, id) {
-  this.title = title;
-  this.author = author;
-  this.id = id;
-}
+class Book {
+  constructor (title, author) {
+  this._title = title;
+  this._author = author;
+  this._id = books.length;
+  }
 
-// adding books
-function addBook(title, author) {
-  const book = new Book(title, author, books.length);
-  books.push(book);
-  return book;
+  get title() {
+    return this._title
+  }
+
+  get author() {
+    return this._author
+  }
+
+  get id() {
+    return this._id
+  }
+
+  get addBook() {
+    books.push(this);
+    return this;
+  }
+
 }
 
 function newBookItem() {
-  const book = addBook(newBookTitle.value, newBookAuthor.value);
+  const book = new Book(newBookTitle.value, newBookAuthor.value);
+  book.addBook;
   bookElement(book);
 }
 
