@@ -39,20 +39,21 @@ function newBookItem() {
 
 // Removing books
 function remove(bookId) {
-  let removedBook = books.filter(removeBook)
+  // eslint-disable-next-line no-use-before-define
+  const removedBook = books.filter(removeBook);
   function removeBook(book) {
-    return book.id !== parseInt(bookId)
+    return book.id !== parseInt(bookId, 10);
   }
-  books = removedBook
+  books = removedBook;
   localStorage.setItem('local-books', JSON.stringify(removedBook));
 }
 
-bookList.addEventListener('click',((e) => {
-  if (e.target.classList[0] === 'button'){
-    remove(e.target.classList[1])
-    e.target.parentElement.remove()
+bookList.addEventListener('click', ((e) => {
+  if (e.target.classList[0] === 'button') {
+    remove(e.target.classList[1]);
+    e.target.parentElement.remove();
   }
-}))
+}));
 
 if (storedBooks) {
   books = storedBooks;
