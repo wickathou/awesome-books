@@ -17,7 +17,8 @@
 
 # 📖 Awesome books <a name="about-project"></a>
 
-**Awesome Books** .
+**Awesome Books**, in this project, @huzaifakhan0308 and me, create a simple website with dynamic data using JS.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
