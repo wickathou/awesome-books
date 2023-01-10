@@ -5,6 +5,7 @@ const newBookTitle = document.getElementById('title');
 const newBookAuthor = document.getElementById('author');
 const bookList = document.getElementById('book-list');
 
+// DOM element creation 
 function bookElement(bookData) {
   const bookItem = document.createElement('li');
   bookItem.id = `${bookData.id}`;
