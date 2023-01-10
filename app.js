@@ -14,7 +14,7 @@ function bookElement(bookData) {
   bookItemAuthor.textContent = bookData.author;
   const bookRemoveButton = document.createElement('button');
   bookRemoveButton.textContent = 'Remove';
-  bookRemoveButton.id = `button-${bookData.id}`;
+  bookRemoveButton.classList = `button ${bookData.id}`;
   bookItem.append(bookItemTitle, bookItemAuthor, bookRemoveButton);
   bookList.appendChild(bookItem);
 }
@@ -38,9 +38,21 @@ function newBookItem() {
 }
 
 // Removing books
-function removeBook() {
-  
+function remove(bookId) {
+  let removedBook = books.filter(removeBook)
+  function removeBook(book) {
+    return book.id !== parseInt(bookId)
+  }
+  books = removedBook
+  localStorage.setItem('local-books', JSON.stringify(removedBook));
 }
+
+bookList.addEventListener('click',((e) => {
+  if (e.target.classList[0] === 'button'){
+    remove(e.target.classList[1])
+    e.target.parentElement.remove()
+  }
+}))
 
 if (storedBooks) {
   books = storedBooks;
