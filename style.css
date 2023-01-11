@@ -22,7 +22,7 @@ nav{
   align-items: center;
   position: fixed;
   border: 2px solid black;
-  width: 97%;
+  /* width: 97%; */
 }
 
 nav h1{
@@ -122,4 +122,10 @@ form {
 
 .button {
   margin-right: 10px;
+}
+
+/* Contact section  */
+
+.contact-form-disappear {
+  display: none;
 }
