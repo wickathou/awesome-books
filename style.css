@@ -5,19 +5,58 @@
   font-family: "Poppins", sans-serif;
 }
 
+html{
+  overflow: hidden;
+}
+
 body {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  border: 2px solid black;
+  width: 97%;
+}
+
+nav h1{
+  padding-left: 10px;
+}
+
+/* nav div {
+  padding-right: 10px;
+} */
+
+nav a{
+  text-decoration: none;
+  padding: 20px;
+}
+
+nav .Add-new {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+main{
+  margin-top: 8vh;
+}
+
 /* section-1 */
 
 .books-stored {
-  display: flex;
+  display: none;
+  flex-direction: column;
   width: 100%;
+}
+
+.books-stored-appear{
+  display: flex;
 }
 
 .book-list-item {
@@ -38,6 +77,10 @@ body {
   flex-direction: column;
 }
 
+.books-add-disappear{
+  display: none;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -46,12 +89,12 @@ form {
 }
 
 #title {
-  width: 100%;
+  width: 30vh;
 }
 
 #author {
-  margin: 10px;
-  width: 100%;
+  margin: 10px 0px 10px 0px;
+  width: 30vh;
 }
 
 #add {

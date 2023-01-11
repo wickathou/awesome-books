@@ -103,3 +103,22 @@ addButton.addEventListener(('click'), ((e) => {
     newBookTitle.value = '';
   }
 }));
+
+const bookStored = document.querySelector('.books-stored')
+const booksAdd = document.querySelector('.books-add')
+
+document.querySelector('.nav').addEventListener('click',((e)=>{
+  if (e.target.innerText === 'List'){
+    bookStored.classList.add('books-stored-appear') 
+    booksAdd.classList.add('books-add-disappear')
+    console.log(bookStored);
+  }
+  if (e.target.innerText === 'Add new'){
+    bookStored.classList.remove('books-stored-appear')
+    booksAdd.classList.remove('books-add-disappear')
+
+  }
+  if (e.target.innerText === 'Contact'){
+    
+  }
+}))
