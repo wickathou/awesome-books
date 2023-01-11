@@ -126,3 +126,17 @@ document.querySelector('.nav').addEventListener('click',((e)=>{
     contactForm.classList.remove('contact-form-disappear')
   }
 }))
+
+// Timestamp content 
+
+const currentTimeDiv = document.getElementById('current-time')
+
+function timeTrackUpdate() {
+  const currentTimeBlock = document.createElement('p')
+  let currentTime = new Date();
+  currentTimeBlock.textContent = currentTime;
+  currentTimeDiv.replaceChildren(currentTimeBlock.textContent.replace(/\(.*\)/g, ""));
+}
+
+timeTrackUpdate()
+setInterval(timeTrackUpdate, 1000);

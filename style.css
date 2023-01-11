@@ -5,6 +5,46 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Utilities */
+
+.width-80 {
+  width: 80%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.border {
+  border: 2px black solid;
+}
+
+.p-1 {
+  padding: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* Specific CSS selectors */
+
 html{
   overflow: hidden;
 }
@@ -20,9 +60,8 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
   border: 2px solid black;
-  /* width: 97%; */
+  width: 100%;
 }
 
 nav h1{
@@ -44,7 +83,7 @@ nav .Add-new {
 }
 
 main{
-  margin-top: 8vh;
+  margin: 8vh auto;
 }
 
 /* section-1 */
