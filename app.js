@@ -104,11 +104,13 @@ addButton.addEventListener(('click'), ((e) => {
   }
 }));
 
-const currentTimeElement = document.getElementById('current-time')
+const currentTimeDiv = document.getElementById('current-time')
+const currentTimeBlock = document.createElement('p')
 
 function timeTrackUpdate() {
-  let currentTime = new Date()
-  currentTimeElement.textContent = currentTime;
+  let currentTime = new Date();
+  currentTimeBlock.textContent = currentTime;
+  currentTimeDiv.replaceChildren(currentTimeBlock.textContent.replace(/\(.*\)/g, ""));
 }
 
 setInterval(timeTrackUpdate, 1000);
