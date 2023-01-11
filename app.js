@@ -103,3 +103,12 @@ addButton.addEventListener(('click'), ((e) => {
     newBookTitle.value = '';
   }
 }));
+
+const currentTimeElement = document.getElementById('current-time')
+
+function timeTrackUpdate() {
+  let currentTime = new Date()
+  currentTimeElement.textContent = currentTime;
+}
+
+setInterval(timeTrackUpdate, 1000);
