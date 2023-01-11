@@ -1,3 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Combo&family=Poppins&display=swap");
+
 * {
   color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* section-1 */
+
+.books-stored {
+  display: flex;
+  width: 100%;
+}
+
+.book-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid black;
+  list-style: none;
+  width: 100%;
+}
+
+/* section-2 */
+
+.books-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  width: 100%;
+}
+
+#author {
+  margin: 10px;
+  width: 100%;
+}
+
+#add {
+  align-self: flex-end;
+}
+
+/* js classes */
+
+.books {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.books-info-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-author {
+  margin: 10px;
+}
+
+.button {
+  margin-right: 10px;
 }
