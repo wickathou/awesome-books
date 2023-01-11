@@ -45,7 +45,7 @@
 
 /* Specific CSS selectors */
 
-html{
+html {
   overflow: hidden;
 }
 
@@ -56,7 +56,7 @@ body {
   width: 100%;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +64,7 @@ nav{
   width: 100%;
 }
 
-nav h1{
+nav h1 {
   padding-left: 10px;
 }
 
@@ -72,7 +72,7 @@ nav h1{
   padding-right: 10px;
 } */
 
-nav a{
+nav a {
   text-decoration: none;
   padding: 20px;
 }
@@ -82,7 +82,7 @@ nav .Add-new {
   border-right: 2px solid black;
 }
 
-main{
+main {
   margin: 8vh auto;
 }
 
@@ -94,7 +94,7 @@ main{
   width: 100%;
 }
 
-.books-stored-appear{
+.books-stored-appear {
   display: flex;
 }
 
@@ -116,7 +116,7 @@ main{
   flex-direction: column;
 }
 
-.books-add-disappear{
+.books-add-disappear {
   display: none;
 }
 
@@ -132,7 +132,7 @@ form {
 }
 
 #author {
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0 10px 0;
   width: 30vh;
 }
 

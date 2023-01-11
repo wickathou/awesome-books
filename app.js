@@ -104,39 +104,38 @@ addButton.addEventListener(('click'), ((e) => {
   }
 }));
 
-const bookStored = document.querySelector('.books-stored')
-const booksAdd = document.querySelector('.books-add')
-const contactForm = document.querySelector('.contact-form')
+const bookStored = document.querySelector('.books-stored');
+const booksAdd = document.querySelector('.books-add');
+const contactForm = document.querySelector('.contact-form');
 
-document.querySelector('.nav').addEventListener('click',((e)=>{
-  if (e.target.innerText === 'List'){
-    bookStored.classList.add('books-stored-appear') 
-    booksAdd.classList.add('books-add-disappear')
-    contactForm.classList.add('contact-form-disappear')
-    console.log(bookStored);
+document.querySelector('.nav').addEventListener('click', ((e) => {
+  if (e.target.innerText === 'List') {
+    bookStored.classList.add('books-stored-appear');
+    booksAdd.classList.add('books-add-disappear');
+    contactForm.classList.add('contact-form-disappear');
   }
-  if (e.target.innerText === 'Add new'){
-    bookStored.classList.remove('books-stored-appear')
-    booksAdd.classList.remove('books-add-disappear')
-    contactForm.classList.add('contact-form-disappear')
+  if (e.target.innerText === 'Add new') {
+    bookStored.classList.remove('books-stored-appear');
+    booksAdd.classList.remove('books-add-disappear');
+    contactForm.classList.add('contact-form-disappear');
   }
-  if (e.target.innerText === 'Contact'){
-    bookStored.classList.remove('books-stored-appear')
-    booksAdd.classList.add('books-add-disappear')
-    contactForm.classList.remove('contact-form-disappear')
+  if (e.target.innerText === 'Contact') {
+    bookStored.classList.remove('books-stored-appear');
+    booksAdd.classList.add('books-add-disappear');
+    contactForm.classList.remove('contact-form-disappear');
   }
-}))
+}));
 
-// Timestamp content 
+// Timestamp content
 
-const currentTimeDiv = document.getElementById('current-time')
+const currentTimeDiv = document.getElementById('current-time');
 
 function timeTrackUpdate() {
-  const currentTimeBlock = document.createElement('p')
-  let currentTime = new Date();
+  const currentTimeBlock = document.createElement('p');
+  const currentTime = new Date();
   currentTimeBlock.textContent = currentTime;
-  currentTimeDiv.replaceChildren(currentTimeBlock.textContent.replace(/\(.*\)/g, ""));
+  currentTimeDiv.replaceChildren(currentTimeBlock.textContent.replace(/\(.*\)/g, ''));
 }
 
-timeTrackUpdate()
+timeTrackUpdate();
 setInterval(timeTrackUpdate, 1000);
