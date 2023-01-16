@@ -8,11 +8,22 @@
   <title>Awesome books</title>
 </head>
 <body>
-  <header>
-    <h1>All awesome books</h1>
+  <header class="flex flex-column width-80 align-items-center justify-content-center">
+    <nav class="nav">
+      <h1>Awesome Books</h1>
+      <div class="">
+        <a href="#" >List</a>
+        <a href="#" class="Add-new">Add new</a>
+        <a href="#" >Contact</a>
+      </div>
+    </nav>
+    <div class="align-self-end" id="current-time"></div>
   </header>
   <main>
     <section class="books-stored">
+      <header>
+        <h1>All awesome books</h1>
+      </header>
       <ul class="book-list-item" id="book-list">
       </ul>
     </section>
@@ -26,8 +37,26 @@
         </form>
       </div>
     </section>
+    <section class="contact-form-disappear contact-form">
+      <h2>Contact information</h2>
+      <p>Do you have questions or you just want to say "Hello"?<br>
+      You can reach out to us!</p>
+      <ul>
+        <li>
+          <p>Our email: team6899@mcv.org</p>
+        </li>
+        <li>
+          <p>Our phone: 0514789632</p>
+        </li>
+        <li>
+          <p>Our address: Fictional St. 12, 07890, Random Town, Acountry</p>
+        </li>
+      </ul>
+    </section>
   </main>
-  <footer></footer>
+  <footer class="width-80 border p-1 bold">
+    <span>Copyright - Team 6899 - 2022</span>
+  </footer>
   <script src="/app.js"></script>
 </body>
 </html>
